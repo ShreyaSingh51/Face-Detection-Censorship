@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Censorship</title>
+
+</head>
+
+<body>
+    <h2>Face Detector And Censorship</h2>
+    <div class="controls">
+        <label>Scale</label>
+        <input type="range" name="SCALE" value="1.35" min="0.3" max="3" step="0.1">
+        <label>Size</label>
+        <input type="range" name="SIZE" value="10" min="1" max="100" step="1">
+    </div>
+    <div class="wrap">
+        <video class="webcam"></video>
+        <canvas class="video"></canvas>
+        <canvas class="face"></canvas>
+    </div>
+    <script src="a315dd94dae95d05c49773b34e9de49c"></script>
+
+    <style data-parcel-key="58578364d3302f75e1fac126882608a3">
+        * {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            margin: 0;
+            background-color: rgba(0, 118, 139, 0.411);
+        }
+
+        h2 {
+            padding-top: 1.5%;
+            padding-left: 35%;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2.5em;
+        }
+
+        label {
+            padding-top: 1.5%;
+            padding-left: 25%;
+            font-size: 1.5em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .wrap {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+
+            align-items: center;
+        }
+
+        .wrap>* {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+
+        .face {
+            position: absolute;
+        }
+    </style>
+
+</body>
+
+</html>

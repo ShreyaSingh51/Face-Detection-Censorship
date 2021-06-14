@@ -1,0 +1,22 @@
+* {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wrap {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+
+        .face {
+            position: absolute;
+        }

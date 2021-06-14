@@ -1,0 +1,40 @@
+
+const video   =document.querySelector('.webcam');
+const canvas   =document.querySelector('.video');
+const ctx=canvas.getContext('2d');
+ctx.strokeStyle="##ffc600";
+ctx.linewidth=2;
+const faceCanvas   =document.querySelector('.face');
+const facectx=canvas.getContext('2d');
+
+const faceDetector=new FaceDetector();
+console.log(video,canvas,faceCanvas,faceDetector);
+
+async function populateVideo(){
+    const stream= await navigator.mediaDevices.getUserMedia({
+        video:{width:1000,height:600},
+    });
+    console.log(stream);
+    video.srcObject=stream;
+    await video.play();
+
+    canvas.width=video.videoWidth;
+    canvas.width=video.videoHeight;
+    faceCanvas.width=video.videoWidth;
+    faceCanvas.width=video.videoHeight ;
+};
+
+async function detect(){
+    const faces=await faceDetector.detect(video);
+    console.log(faces.length);
+    faces.forEach(drawFace);
+    requestAnimationFrame(detect); //recursion
+}
+
+function drawFace(face){
+    console.log(face);
+    const {x,y,height,width}=face.boundingBox;
+    ctx.strokeRect(x,y,height,width);
+
+}
+populateVideo().then(detect);

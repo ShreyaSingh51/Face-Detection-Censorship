@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Censorship</title>
+    <link rel="stylesheet" href="165e77511472cbdaa0abfeb26520dfc1">
+</head>
+
+<body>
+    <div class="wrap">
+        <video class="webcam"></video>
+        <canvas class="video"></canvas>
+        <canvas class="face"></canvas>
+    </div>
+    <script src="a315dd94dae95d05c49773b34e9de49c"></script>
+
+    <style data-parcel-key="d05bd85bb1c523b01f90d6098b859815">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wrap {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap>* {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+
+        .face {
+            position: absolute;
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+* {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            margin: 0;
+            background-color: rgba(86, 139, 0, 0.411);
+        }
+
+        h2 {
+            padding-left: 40%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            padding-left: 30%;
+        }
+
+        .wrap {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap>* {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+
+        .face {
+            position: absolute;
+        }
